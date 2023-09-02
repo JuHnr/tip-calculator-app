@@ -1,0 +1,277 @@
+:root {
+    --button: hsl(172, 67%, 45%);
+    --container-background: hsl(183, 100%, 15%);
+    --title: hsl(186, 14%, 43%);
+    --subtitle: hsl(184, 14%, 56%);
+    --active-state: hsl(185, 41%, 84%);
+    --input-background: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --error: hsl(357, 64%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--active-state);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 50px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    width: 70%;
+    min-width: 890px;
+    margin: 0 auto;
+    padding: 40px;
+    column-gap: 40px;
+    border-radius: 20px;
+    box-shadow: 2px 15px 20px rgba(0, 73, 77, 0.1);
+}
+
+.container {
+    width: 50%;
+}
+
+
+label,
+legend {
+    color: var(--title);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input[type=text] {
+    width: 100%;
+    margin: 15px 0;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input-background);
+    text-align: end;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    color: var(--container-background);
+    transition: all 0.08s ease;
+}
+
+input[type=text]::placeholder {
+    opacity: 0.5;
+}
+
+#bill {
+    background-image: url(images/icon-dollar.svg);
+    background-position: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+#number {
+    background-image: url(images/icon-person.svg);
+    background-position: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+input[type=text]:focus {
+    outline: none !important;
+    border: 2px solid var(--button);
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    border: none;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+.radio-button {
+    background-color: var(--container-background);
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.radio-button:hover {
+    background-color: var(--active-state);
+    color: var(--container-background);
+}
+
+input[type="radio"]:checked+.radio-button {
+    background-color: var(--button);
+    color: var(--container-background);
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#custom {
+    margin: 5px 0;
+}
+
+#custom::placeholder {
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    color: var(--title);
+    text-align: center;
+}
+
+.number-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    display: none;
+    color: var(--error);
+}
+
+#number.input-error {
+    border: 2px solid var(--error);
+}
+
+.tip-calculator {
+    background-color: var(--container-background);
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    color: var(--white);
+}
+
+h3 {
+    font-size: 0.8rem;
+    color: var(--subtitle);
+}
+
+h1,
+h3 {
+    margin: 2px auto;
+}
+
+
+.tip-calculator p {
+    font-size: 2.5rem;
+    color: var(--button);
+}
+
+button {
+    background-color: var(--button);
+    color: var(--container-background);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: var(--active-state);
+    cursor: pointer;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.attribution a {
+    color: var(--button);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+
+    body {
+        margin: 0;
+    }
+
+    .logo {
+        margin: 40px;
+    }
+
+    .main {
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        padding: 25px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    input[type=text] {
+        font-size: 22px;
+    }
+
+    .radio-button {
+        font-size: 20px;
+    }
+
+    #custom::placeholder {
+        font-size: 18px;
+    }
+
+    .tip-calculator {
+        margin-top: 30px;
+        padding: 25px;
+    }
+
+    .tip-calculator p {
+        font-size: 2rem;
+    }
+
+    .content {
+        height: 100px;
+    }
+
+    h1,
+    h3 {
+        margin: 0 auto;
+    }
+
+}

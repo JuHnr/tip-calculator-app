@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+
+<body>
+
+  <div class="flex logo">
+    <img src="images/logo.svg" alt="logo">
+  </div>
+
+  <form class="main">
+
+    <div class="container">
+      <label for="bill">Bill</label> <br>
+      <input type="text" name="bill" id="bill" placeholder="0" />
+
+      <fieldset>
+        <legend>Select Tip % </legend>
+        <input type="radio" id="5" name="tip" value="5" />
+        <label for="5" class="radio-button flex">5%</label>
+
+        <input type="radio" id="10" name="tip" value="10" />
+        <label for="10" class="radio-button flex">10%</label>
+
+        <input type="radio" id="15" name="tip" value="15" />
+        <label for="15" class="radio-button flex">15%</label>
+
+        <input type="radio" id="25" name="tip" value="25" />
+        <label for="25" class="radio-button flex">25%</label>
+
+        <input type="radio" id="50" name="tip" value="50" />
+        <label for="50" class="radio-button flex">50%</label>
+
+        <input type="text" id="custom" name="tip" placeholder="Custom" />
+        <label for="custom" class="flex"></label>
+      </fieldset>
+
+      <div class="number-label"><label for="number">Number of People</label> <span class="error">Can't be zero</span></div><br>
+      <input type="text" name="number" id="number" placeholder="0" />
+
+    </div>
+
+    <div class="container tip-calculator">
+
+      <div class="content">
+        <div>
+          <h1>Tip Amount</h1>
+          <h3>/ person</h3>
+        </div>
+
+        <div>
+          <p>$<span class="tip-amount"></span></p>
+        </div>
+
+      </div>
+
+      <div class="content">
+        <div>
+          <h1>Total</h1>
+          <h3>/ person</h3>
+        </div>
+
+        <div>
+          <p>$<span class="total"></span></p>
+        </div>
+
+      </div>
+
+      <button type="reset"> Reset </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/JuHnr"> JuHnr</a>.
+  </div>
+
+
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
